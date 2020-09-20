@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
-  products = ['html', 'css', 'javascript', 'angular', 'react', 'bootstrap'];
+  categories = [
+    { name: 'Deporte' },
+    { name: 'Tecnologia' },
+    { name: 'Aventura' },
+  ];
 }

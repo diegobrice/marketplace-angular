@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'navbar',
+  selector: 'Navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class Navbar {
-  title = 'Logo';
-}
+export class Navbar {}
