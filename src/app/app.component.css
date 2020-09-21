@@ -1,6 +1,26 @@
-section {
-  margin: 20px 0;
+.categoria__grid {
   padding: 20px 0;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form__container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__container input {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.form__container input[type="text"] {
+  width: 300px;
+}
+
+.form__container input[type="submit"] {
+  margin-top: 10px;
+  width: 150px;
 }

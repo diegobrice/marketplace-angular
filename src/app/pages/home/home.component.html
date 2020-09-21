@@ -1,0 +1,48 @@
+<div class="app__body">
+  <section class="categoria">
+    <div class="container">
+      <h2>Nuestras Categorías</h2>
+      <p>{{ title }}</p>
+      <div class="categoria__grid">
+        <div *ngFor="let category of categories">
+          <div class="categoria__img"></div>
+          <div class="categoria__description">
+            <h3>{{ category.name }}</h3>
+            <p>
+              {{ category.description }}
+            </p>
+            <button (click)="delete(category)">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form__category">
+    <div class="container">
+      <h3>Añadir Categoria</h3>
+
+      <form (submit)="addOrEdit()">
+        <div class="form__container">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            [(ngModel)]="selectedCategory.name"
+            #name
+          />
+          <label for="description">Descripcion</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            [(ngModel)]="selectedCategory.description"
+            #description
+          />
+          <input type="submit" value="Guardar" />
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway',
+    sans-serif;
+}
+
 /* You can add global styles to this file, and also import other style files */
 body {
   background-color: #eee;
@@ -14,12 +22,6 @@ body {
   flex: 1;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway',
-    sans-serif;
-}
 
 h1,
 h2 {
@@ -35,4 +37,11 @@ h2 {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
