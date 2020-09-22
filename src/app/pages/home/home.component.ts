@@ -21,19 +21,23 @@ export class HomeComponent implements OnInit {
   selectedCategory: Category = new Category();
 
   addOrEdit() {
-    this.selectedCategory.id = this.categories.length + 1;
-    this.categories.push(this.selectedCategory);
-    return false;
+    if (this.selectedCategory.id === 0) {
+      this.selectedCategory.id = this.categories.length + 1;
+      this.categories.push(this.selectedCategory);
+    }
+
+    this.selectedCategory = new Category();
   }
 
-  delete(category) {
-    console.log(category);
-    for (let i in this.categories) {
-      if (this.categories[i].id == category.id) {
-        console.log(this.categories[i]);
-        this.categories.splice(i, 1);
-      }
+  delete(categoryId) {
+    if (confirm('Estas seguro de eliminar?')) {
+      this.categories = this.categories.filter((x) => x.id !== categoryId);
+      this.selectedCategory = new Category();
     }
+  }
+
+  openForEdit(category: Category) {
+    this.selectedCategory = category;
   }
 
   ngOnInit(): void {}
